@@ -12,7 +12,7 @@
 
 ## Tech Stack
 
-- Programming Language:** Python
+- Programming Language: Python
 - Telegram Library: `python-telegram-bot`
 - AI tool: Google Gemini 1.5 Flash
 - Where it's hosted: not currently
