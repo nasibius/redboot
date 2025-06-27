@@ -10,13 +10,6 @@
 - AI persona: The bot takes on the persona of a host of a knowledgeable cybersecurity expert at the developer's command.
 - Session management: It has a `/clear` command to wipe the memory.
 
-## Tech Stack
-
-- Programming Language: Python
-- Telegram Library: `python-telegram-bot`
-- AI tool: Google Gemini 1.5 Flash
-- Where it's hosted: not currently
-
 ### Spotlight Feature: Hybrid CVE Analysis
 
 
@@ -30,6 +23,13 @@ The `/cve` command is RedBoot's primary purpose and works quickly because RedBoo
 
 
 And, finally, the technical summary is sent off to the Gemini AI to produce an accurate, concise explanation of what the vulnerability does and what risks it may have. This gives you the fastest overall response and the best information that is accurate and complete.
+
+## Tech Stack
+
+- Programming Language: Python
+- Telegram Library: `python-telegram-bot`
+- AI tool: Google Gemini 1.5 Flash
+- Where it's hosted: not currently
 
 ## CHALLENGES & SOLUTIONS
 
