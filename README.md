@@ -12,10 +12,24 @@
 
 ## Tech Stack
 
-- Programming Language:** Python
+- Programming Language: Python
 - Telegram Library: `python-telegram-bot`
 - AI tool: Google Gemini 1.5 Flash
 - Where it's hosted: not currently
+
+### Spotlight Feature: Hybrid CVE Analysis
+
+
+The `/cve` command is RedBoot's primary purpose and works quickly because RedBoot retrieves data in two distinct steps.
+
+
+1.  **First API Call:** The bot first communicates with the fast API located at `cve.circl.lu`, fetching structured JSON data. The bot will also return quickly on any of the described known vulnerabilities.
+
+
+2.  **Web Scraper Call:** If the first API does not return a complete description or a current CVSS v3 score, the bot will set up and launch a web scraper. The bot will grab the official NIST National Vulnerability Database page, it will parse the HTML with BeautifulSoup, and then intelligently grab the missing data, with v2 and v3 scores as well as the tried and tested summary for the common vulnerabilities in the original NIST data format.
+
+
+And, finally, the technical summary is sent off to the Gemini AI to produce an accurate, concise explanation of what the vulnerability does and what risks it may have. This gives you the fastest overall response and the best information that is accurate and complete.
 
 ## CHALLENGES & SOLUTIONS
 
