@@ -17,6 +17,7 @@
 - AI tool: Google Gemini 1.5 Flash
 - Where it's hosted: pythonanywhere.com
 
+
 ### Spotlight Feature: Hybrid CVE Analysis
 
 
@@ -30,6 +31,13 @@ The `/cve` command is RedBoot's primary purpose and works quickly because RedBoo
 
 
 And, finally, the technical summary is sent off to the Gemini AI to produce an accurate, concise explanation of what the vulnerability does and what risks it may have. This gives you the fastest overall response and the best information that is accurate and complete.
+
+## Tech Stack
+
+- Programming Language: Python
+- Telegram Library: `python-telegram-bot`
+- AI tool: Google Gemini 1.5 Flash
+- Where it's hosted: pythonanywhere.com
 
 ## CHALLENGES & SOLUTIONS
 
