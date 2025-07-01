@@ -15,7 +15,6 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, CallbackQueryHandler
 from telegram.constants import ParseMode
 from telegram.error import BadRequest
-from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
 # Token and api key
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "YOUR TOKEN")
@@ -133,10 +132,21 @@ def sanitize_telegram_html(text: str) -> str:
     return text
 
 def configure_gemini():
+    """ИСПРАВЛЕННАЯ ВЕРСИЯ: использует строки для настроек безопасности, чтобы избежать проблем с версиями."""
     try:
         genai.configure(api_key=GEMINI_API_KEY)
-        safety_settings = { HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE, HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE, HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE, HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE, }
-        model = genai.GenerativeModel(model_name="gemini-1.5-flash", system_instruction=SYSTEM_PROMPT, safety_settings=safety_settings)
+        # Используем строки вместо импортируемых классов - это более надежно
+        safety_settings = {
+            "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_NONE",
+            "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
+            "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE",
+            "HARM_CATEGORY_SEXUALLY_EXPLICIT": "BLOCK_NONE",
+        }
+        model = genai.GenerativeModel(
+            model_name="gemini-1.5-flash",
+            system_instruction=SYSTEM_PROMPT,
+            safety_settings=safety_settings
+        )
         return model
     except Exception as e:
         logger.error(f"Ошибка конфигурации Gemini AI: {e}")
