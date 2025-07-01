@@ -37,7 +37,7 @@ And, finally, the technical summary is sent off to the Gemini AI to produce an a
 - Programming Language: Python
 - Telegram Library: `python-telegram-bot`
 - AI tool: Google Gemini 1.5 Flash
-- Where it's hosted: pythonanywhere.com
+- Where it's hosted: cloud.oracle.com
 
 ## CHALLENGES & SOLUTIONS
 
