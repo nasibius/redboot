@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from dotenv import load_dotenv
+load_dotenv()
 import logging
 import os
 import re
@@ -15,8 +17,8 @@ from telegram.error import BadRequest
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
 # Token and api key
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "x")
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "x")
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "YOUR TOKEN")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "YOUR GEMINI API KEY")
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO

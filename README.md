@@ -15,7 +15,7 @@
 - Programming Language: Python
 - Telegram Library: `python-telegram-bot`
 - AI tool: Google Gemini 1.5 Flash
-- Where it's hosted: not currently
+- Where it's hosted: pythonanywhere.com
 
 ### Spotlight Feature: Hybrid CVE Analysis
 
@@ -42,7 +42,7 @@ During the course of development, I encountered a few issues that were crucial t
 ## How to Run
 
 1.  Clone the repository:
-    git clone https://github.com/yaqness/redboot_tgbot.git
+    git clone https://github.com/nasibius/redboot_tgbot.git
     cd RedBoot
 2.  Install dependencies: pip install python-telegram-bot google-generativeai
 3.  Set up your environment variables. You will need to change the following: `TELEGRAM_TOKEN` and `GEMINI_API_KEY`
