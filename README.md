@@ -1,7 +1,7 @@
 # RedBoot: The AI Cybersecurity Assistant for Telegram
 
 
-![Logo](assets/logo.png)
+![Logo](assets/logo.jpg)
 
 
 RedBoot is an advanced chatbot running on Telegram that provides answers to questions about cybersecurity. It uses Google's Gemini AI large language model to provide information about vulnerabilities, protective measures, and security tools.
@@ -28,7 +28,7 @@ RedBoot is an advanced chatbot running on Telegram that provides answers to ques
 - **Scheduling:** APScheduler for daily tasks
 - **Data Parsing:** BeautifulSoup, Feedparser
 - **Database:** SQLite for subscriber management
-- **Deployment:** Oracle Cloud (Always Free Tier)
+- **Deployment:** Oracle Cloud
 
 ## Spotlight Feature: Hybrid CVE Analysis
 
@@ -57,7 +57,7 @@ During the course of development, I encountered a few issues that were crucial t
     ```
 2.  Install dependencies:
     ```bash
-    pip install requirements.txt
+    pip install -r requirements.txt
     ```
 3.  Set up your environment variables. You will need:
     - `TELEGRAM_TOKEN`
