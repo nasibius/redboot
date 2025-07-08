@@ -1,7 +1,7 @@
 # RedBoot: The AI Cybersecurity Assistant for Telegram
 
 
-![Logo](assets/avatar.png)
+![Logo](assets/logo.png)
 
 
 RedBoot is an advanced chatbot running on Telegram that provides answers to questions about cybersecurity. It uses Google's Gemini AI large language model to provide information about vulnerabilities, protective measures, and security tools.
